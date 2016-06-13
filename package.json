@@ -1,0 +1,16 @@
+{
+  "name": "whatapop",
+  "version": "1.0.0",
+  "description": "Practica Angular JS KC Bootcamp III",
+  "scripts": {
+    "sparrest": "node node_modules/node-sparrest/node-sparrest.js",
+    "lite": "lite-server",
+    "start": "concurrently 'npm run sparrest' 'npm  run lite'" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enanibus/whatapop"
+  },
+  "author": "Jacobo Enriquez Gabeiras",
+  "license": "MIT"
+}
