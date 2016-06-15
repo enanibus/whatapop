@@ -1,0 +1,30 @@
+<div class="container">
+
+    <!-- Cabecera de la aplicación -->
+    <div class="row">
+        <div class="twelve columns">
+            <header>
+                <h1>Whatapop</h1>
+                <h5>¡Compra y vende productos en un pulsar y soltar de click!</h5>
+            </header>
+        </div>
+    </div>
+
+    <!-- Barra de navegación -->
+    <div class="row">
+        <div class="twelve columns">
+            <nav class="barra-navegacion">
+                <ul>
+                    <li>
+                        <!-- Con 'ngLink' establecemos el nombre de ruta a navegar -->
+                        <a ng-link="['Products']">Products</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Zona dinámica -->
+    <ng-outlet></ng-outlet>
+
+</div>

@@ -5,12 +5,22 @@
   "scripts": {
     "sparrest": "node node_modules/node-sparrest/node-sparrest.js",
     "lite": "lite-server",
-    "start": "concurrently 'npm run sparrest' 'npm  run lite'" 
+    "dev": "concurrently 'npm run sparrest' 'npm run lite'"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/enanibus/whatapop"
   },
   "author": "Jacobo Enriquez Gabeiras",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@angular/router": "^0.2.0",
+    "angular": "^1.5.6",
+    "lite-server": "^2.2.0",
+    "skeleton-css": "^2.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^2.1.0",
+    "node-sparrest": "0.0.10"
+  }
 }

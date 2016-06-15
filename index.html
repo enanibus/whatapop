@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Con 'base' indicamos la ruta base a partir
+    de la cual se contruye el Single Page Application -->
+    <base href="/">
+    <meta charset="UTF-8">
+    <title>Whatapop - Compra-Venta de Productos</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="node_modules/skeleton-css/css/normalize.css">
+    <link rel="stylesheet" href="node_modules/skeleton-css/css/skeleton.css">
+    <link rel="stylesheet" href="styles/whatapop.css">
+    <!-- AngularJS -->
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/@angular/router/angular1/angular_1_router.js"></script>
+    <!-- Documento de configuración del módulo -->
+    <script src="scripts/app.js"></script>
+    <!-- Componentes -->
+    <script src="scripts/components/products.js"></script>
+    <script src="scripts/components/raiz.js"></script>
+    <script src="scripts/components/one-product.js"></script>
+    <!-- Filtros -->
+    <!-- Servicios -->
+    <script src="scripts/services/product-service.js"></script>
+    <!-- Directivas -->
+    <!-- Values -->
+    <script src="scripts/values/propiedades.js"></script>
+</head>
+<!-- Hacemos el bootstrapping del módulo -->
+<body ng-app="whatapop">
+<!-- Componente raíz -->
+<raiz></raiz>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Whatapop
 
-**Práctia Angular JS - KeepCoding Startup Engineering Master III**
+**Práctica Angular JS - KeepCoding Startup Engineering Master III**
 
 Frontend para dar soporte a una aplicación de venta de artículos de segunda mano.
 
@@ -17,17 +17,18 @@ Requisitos de instalación:
 	$ cd whatapop
 	$ npm install
       
-### Ejecutar
-	$ npm start
+### Ejecución
+	$ npm run dev
 	
 ## Documentación detallada
 Mirar en la [wiki](https://github.com/enanibus/whatapop/wiki) del proyecto
 
-## Operaciones
-Los servicios que proporciona el API son:
+## Frontend
+Los servicios que proporciona son:
 
-- **Lista de productos** ((con filtro de búsqueda)
-- **Aetalle de un producto** (id.producto)
+- **Lista de productos**
+- **Filtros de búsqueda de productos (nombre/categoría)** 
+- **Detalle de un producto** (id.producto)
 
 ## Changelog
 

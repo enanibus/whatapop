@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="twelve columns">
+
+        <!-- Filtros -->
+        <table class="u-full-width">
+            <tbody>
+                <tr>
+                    <td>
+                        <!-- Filtro de nombres -->
+                        <label for="filtro-products">Busca por nombre</label>
+                        <input
+                            id="filtro-products"
+                            type="text"
+                            placeholder=""
+                            ng-model="$ctrl.filtroProducts.name">
+                    </td>
+                    <td>
+                        <!-- Filtro de categorias -->
+                        <label for="filtro-categories">Busca por categoría</label>
+                        <select id="filtro-categories" ng-model="$ctrl.filtroCategories.name">
+                            <option value=" "></option>
+                            <option value="Videojuegos">Videojuegos</option>
+                            <option value="Películas">Películas</option>
+                            <option value="Libros">Libros</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Lista de productos -->
+        <table class="u-full-width">
+            <tbody>
+                <tr ng-repeat="product in $ctrl.products |
+                    filter:$ctrl.filtroProducts |
+                    filter:$ctrl.filtroCategories.name |
+                    orderBy:'name'">
+                    <td>
+                        <a ng-link="['OneProduct',{id: product.id}]">
+                            <img
+                                ng-src="{{ $ctrl.obtenerRutaImagen(product.photos[0]) }}"
+                                width="60"
+                                height="60">
+                        </a>
+                    </td>
+                    <td>
+                        <div>{{ product.name }}</div>
+                        <div>
+                            <small>
+                                {{ product.category.name }}
+                            </small>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- En el array que pasamos a la directiva ngLink podemos indicar parámetros de
+                             ruta. Para ello, basta con pasar un JSON como segundo elemento. -->
+                        <a ng-link="['OneProduct', { id: product.id }]"><button>Detalle</button></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

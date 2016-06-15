@@ -1,0 +1,35 @@
+
+.barra-navegacion ul {
+    height: 42px;
+    border-bottom: 1px solid #1eaedb;
+}
+
+.barra-navegacion li {
+    height: 33px;
+    display: inline-block;
+    padding-top: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.barra-navegacion li.seleccionada {
+    border-top: 1px solid #1eaedb;
+    border-left: 1px solid #1eaedb;
+    border-right: 1px solid #1eaedb;
+}
+
+.barra-navegacion a {
+    text-decoration: none;
+}
+
+.boton-eliminar {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.boton-eliminar:hover {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+}
