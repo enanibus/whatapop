@@ -14,7 +14,7 @@ angular
             // a los parámetros definidos en la ruta.
             self.$routerOnActivate = function (next) {
 
-                // Recuperamos el identificador de la receta
+                // Recuperamos el identificador del producto
                 // a partir de los parámetros de la ruta.
                 var productId = next.params.id;
 

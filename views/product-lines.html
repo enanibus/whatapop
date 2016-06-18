@@ -1,0 +1,26 @@
+
+    <table class="u-full-width">
+        <tbody>
+            <tr>
+                <td>
+                    <a ng-link="['OneProduct',{id: product.id}]">
+                        <img
+                                ng-src="{{ obtenerImagen(product.photos[0]) }}"
+                                width="60"
+                                height="80">
+                    </a>
+                </td>
+                <td>
+                    <div>{{ product.name }}</div>
+                    <div>
+                        <small>
+                            {{ product.category.name }}
+                        </small>
+                    </div>
+                </td>
+                <td>
+                    <button ng-link="['OneProduct',{id: product.id}]">Detalle</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>

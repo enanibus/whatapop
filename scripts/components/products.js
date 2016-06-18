@@ -10,8 +10,11 @@ angular
 
             var self = this;
 
+            // Filtro para buscar productos por nombre.
+            self.filtroProducts = {name: ""};
+
             // Filtro para buscar productos por categoria.
-            self.filtro = {name: ""};
+            self.filtroCategories = {name: ""};
 
             // Podemos engancharnos al hook '$onInit', que se
             // dispara cuando el componente se inicia.

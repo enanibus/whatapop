@@ -28,7 +28,7 @@ Los servicios que proporciona son:
 
 - **Lista de productos**
 - **Filtros de búsqueda de productos (nombre/categoría)** 
-- **Detalle de un producto** (id.producto)
+- **Detalle de un producto**
 
 ## Changelog
 
