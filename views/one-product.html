@@ -2,31 +2,36 @@
 
 
     <div class="three columns">
-        <img ng-src="{{ $ctrl.obtenerRutaImagen($ctrl.product.photos[0]) }}"
+        <img ng-src="{{ ::$ctrl.obtenerRutaImagen($ctrl.product.photos[0]) }}"
              width="100%"
              height="100%">
     </div>
 
     <div class="nine columns">
-        <h4>{{ $ctrl.product.name}}</h4>
+        <h4>{{ ::$ctrl.product.name}}</h4>
         <div
                 ng-bind-html="$ctrl.descriptionHtml">
 
         </div>
         <div>
-            <h5>Categoría: {{ $ctrl.product.category.name }}</h5>
+            <h5>Categoría: {{ ::$ctrl.product.category.name }}</h5>
         </div>
         <div>
-            <h6>Usuario: {{ $ctrl.product.seller.nick }}</h6>
+            <small>
+                <h6>Vendedor: {{ ::$ctrl.product.seller.nick }}</h6>
+                <img ng-src="{{ ::$ctrl.obtenerRutaImagen($ctrl.product.seller.avatar) }}"
+                     width="10%"
+                     height="10%">
+            </small>
         </div>
         <div>
-            <h6>Publicado: {{$ctrl.product.published_date}}</h6>
+            <h6>Publicado: {{ ::$ctrl.product.published_date }}</h6>
         </div>
         <div>
-            <h6> Estado: {{ $ctrl.product.state }} </h6>
+            <h6> Estado: {{ ::$ctrl.product.state }} </h6>
         </div>
         <div>
-            <h5> Precio: {{ $ctrl.product.price }} </h5>
+            <h5> Precio: {{ ::$ctrl.product.price | currency: "€" }} </h5>
         </div>
         <div>
             <button class="button u-full-width" ng-link="['Products']">Volver a lista de productos</button>
