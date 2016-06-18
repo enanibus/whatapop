@@ -1,16 +1,16 @@
-
+<div class="row">
     <table class="u-full-width">
         <tbody>
             <tr>
-                <td>
+                <td class="celda1">
                     <a ng-link="['OneProduct',{id: product.id}]">
                         <img
                                 ng-src="{{ ::obtenerImagen(product.photos[0]) }}"
-                                width="60"
-                                height="80">
+                                width="80"
+                                height="100">
                     </a>
                 </td>
-                <td>
+                <td class="celda2">
                     <div>{{ ::product.name }}</div>
                     <div>
                         <small>
@@ -18,9 +18,10 @@
                         </small>
                     </div>
                 </td>
-                <td>
+                <td class="celda3">
                     <button ng-link="['OneProduct',{id: product.id}]">Detalle</button>
                 </td>
             </tr>
         </tbody>
     </table>
+</div>

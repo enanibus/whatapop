@@ -7,9 +7,9 @@ angular
             component: "products"
         },
             {
-            name: "OneProduct",
-            path: "/product/:id",
-            component: "oneProduct"
-        }],
+                name: "OneProduct",
+                path: "/product/:id",
+                component: "oneProduct"
+            }],
         templateUrl: "views/raiz.html"
     });

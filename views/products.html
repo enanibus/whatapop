@@ -4,35 +4,35 @@
         <!-- Filtros -->
         <table class="u-full-width">
             <tbody>
-            <tr>
-                <td>
-                    <!-- Filtro de nombres -->
-                    <label for="filtro-products">Búsqueda por nombre</label>
-                    <input
-                            id="filtro-products"
-                            type="text"
-                            placeholder=""
-                            ng-model="$ctrl.filtroProducts.name">
-                </td>
-                <td>
-                    <!-- Filtro de categorias -->
-                    <label for="filtro-categories">Búsqueda por categoría</label>
-                    <select id="filtro-categories" ng-model="$ctrl.filtroCategories.category.name">
-                        <option value=""></option>
-                        <option value="Videojuegos">Videojuegos</option>
-                        <option value="Películas">Películas</option>
-                        <option value="Libros">Libros</option>
-                    </select>
-                </td>
-            </tr>
+                <tr>
+                    <td class="celda1">
+                        <!-- Filtro de nombres -->
+                        <label for="filtro-products">Búsqueda por nombre</label>
+                        <input
+                                id="filtro-products"
+                                type="search"
+                                placeholder=""
+                                ng-model="$ctrl.filtroProducts.name">
+                    </td>
+                    <td>
+                        <!-- Filtro de categorias -->
+                        <label for="filtro-categories">Selecciona categoría</label>
+                        <select id="filtro-categories" ng-model="$ctrl.filtroCategories.category.name">
+                            <option value=""></option>
+                            <option value="Videojuegos">Videojuegos</option>
+                            <option value="Películas">Películas</option>
+                            <option value="Libros">Libros</option>
+                        </select>
+                    </td>
+                </tr>
             </tbody>
         </table>
 
         <!-- Lista de productos -->
-        <product-lines ng-repeat="data in $ctrl.products |
-                    filter:$ctrl.filtroProducts |
-                    filter:$ctrl.filtroCategories |
-                    orderBy:'name'" product="data"></product-lines>
+            <product-lines ng-repeat="data in $ctrl.products |
+                        filter:$ctrl.filtroProducts |
+                        filter:$ctrl.filtroCategories |
+                        orderBy:'name'" product="data"></product-lines>
 
     </div>
 </div>

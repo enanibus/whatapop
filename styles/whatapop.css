@@ -20,6 +20,15 @@
 
 .barra-navegacion a {
     text-decoration: none;
+    font-size: large;
+}
+
+.barra-navegacion {
+
+}
+
+.cabecera {
+    background-color: #e04251;
 }
 
 .boton-eliminar {
@@ -32,4 +41,15 @@
     color: #fff;
     background-color: #c9302c;
     border-color: #ac2925;
+}
+
+.celda1{
+    width: 20px;
+}
+.celda2{
+    width: 200px;
+    font-size: large;
+}
+.celda3{
+    width: 20px;
 }
