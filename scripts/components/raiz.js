@@ -6,10 +6,15 @@ angular
             path: "/products",
             component: "products"
         },
-            {
-                name: "OneProduct",
-                path: "/product/:id",
-                component: "oneProduct"
-            }],
+        {
+            name: "OneProduct",
+            path: "/product/:id",
+            component: "oneProduct"
+        },
+        {
+            name: "NewProduct",
+                path: "/new-product",
+            component: "newProduct"
+        }],
         templateUrl: "views/raiz.html"
     });

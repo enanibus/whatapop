@@ -6,6 +6,7 @@
              height="100%">
     </div>
 
+
     <div class="nine columns">
         <h4>{{ ::$ctrl.product.name}}</h4>
         <div
@@ -24,7 +25,7 @@
             </small>
         </div>
         <div>
-            <h6>Publicado: {{ ::$ctrl.product.published_date }}</h6>
+            <h6>Publicado: {{ ::$ctrl.product.published_date | date : 'd MMMM yyyy' }}</h6>
         </div>
         <div>
             <h6> Estado: {{ ::$ctrl.product.state }} </h6>
@@ -33,8 +34,14 @@
             <h5> Precio: {{ ::$ctrl.product.price | currency: "€" }} </h5>
         </div>
         <div>
+            <label for="check">Marcar como favorito</label>
+            <input type="checkbox" id="check" ng-checked="$ctrl.isFavorite" ng-click="$ctrl.markAsFavorite()">
+        </div>
+        <div>
             <button class="button u-full-width" ng-link="['Products']">Volver a lista de productos</button>
         </div>
+
+
     </div>
 
 </div>

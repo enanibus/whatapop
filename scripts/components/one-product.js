@@ -23,9 +23,33 @@ angular
                     self.product = response.data;
                     self.descriptionHtml = $sce.trustAsHtml(self.product.description);
                 });
+
+                // Recuperar valor de favorito
+                self.isFavorite = localStorage.getItem(productId);
             };
 
             // Obtenemos la ruta absoluta de la imagen.
             self.obtenerRutaImagen = ProductService.obtenerRutaImagenAbsoluta;
+
+
+            self.markAsFavorite = function () {
+                if (typeof(Storage) !== "undefined") {
+
+                    var marked = localStorage.getItem(self.product.id);
+
+                    if (marked === "true") {
+                        localStorage.removeItem(self.product.id);
+                        self.isFavorite = false;
+                        return;
+                    }
+                    if (marked !== "false") {
+                        localStorage.setItem(self.product.id, "true");
+                        self.isFavorite = true;
+                        return;
+                    }
+                }
+            }
+
         }
+
     });
